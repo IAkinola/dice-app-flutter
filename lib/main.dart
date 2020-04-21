@@ -7,8 +7,9 @@ void main() => runApp(
           backgroundColor: Colors.red,
           appBar: AppBar(
             title: Text('Dicee'),
+            backgroundColor: Colors.red,
           ),
-          body: DicePage(),
+        body: DicePage(),
         ),
       ),
     );

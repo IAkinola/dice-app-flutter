@@ -21,43 +21,42 @@ class _DicePageState extends State<DicePage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Center(
-        child: Column(
-          children: <Widget>[
-            Row(
-              children: <Widget>[
-                //Left Die
-                Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Expanded(
-                    child: Image.asset('images/dice$leftDiceNumber.png'),
-                  ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Row(
+            children: <Widget>[
+              //Left Die
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Image.asset('images/dice$leftDiceNumber.png'),
                 ),
-
-                //Right Die
-                Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Expanded(
-                    child: Image.asset('images/dice$rightDiceNumber.png'),
-                  ),
-                ),
-              ],
-            ),
-
-            //Button to throw dice
-            RaisedButton(
-              color: Colors.white,
-              textColor: Colors.red,
-              onPressed: () {
-                throwFunction();
-              },
-              child: Text(
-                'roll',
-                style: TextStyle(fontSize: 20),
               ),
+
+              //Right Die
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Image.asset('images/dice$rightDiceNumber.png'),
+                ),
+              ),
+            ],
+          ),
+          
+          //Button to throw dice
+          RaisedButton(
+            color: Colors.white,
+            textColor: Colors.red,
+            onPressed: () {
+              throwFunction();
+            },
+            child: Text(
+              'Roll',
+              style: TextStyle(fontSize: 20),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
